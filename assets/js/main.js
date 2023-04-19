@@ -84,4 +84,10 @@ const showMenu = ( toggleId, navId ) => {
   
   /*SCROLL CONTACT*/
   // sr.reveal(".contact-input", { interval: 200 });
+   function vipin(){
+    window.location.href = "https://drive.google.com/uc?export=download&id=1nPz2y9tUfYpOHvpM5QmU7pNvwaurbetl";
+  
+
+
+   }
   
