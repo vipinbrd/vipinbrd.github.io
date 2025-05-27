@@ -2,514 +2,396 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="./assets/img/h.png" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css"> -->
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-
-    <!-- =====BOX ICONS===== -->
+    <!-- Boxicons -->
     <link
       href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <!--===== SCROLL REVEAL =====-->
-   
+    <!-- Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <title>vipin</title>
-    <style>
-      .image-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .image-container img {
-        max-width: 100%;
-        height: auto;
-        margin: 10px;
-      }
-    </style>
+
+    <title>Vipin</title>
   </head>
-  <body>
-    <!--===== HEADER =====-->
-    <header class="l-header">
-      <nav class="nav bd-grid">
+  <body class="bg-gray-50 text-gray-800">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow sticky top-0 z-50">
+      <nav class="container mx-auto flex justify-between items-center p-4">
         <div>
-        
-          <!-- <a href="#home" class="nav-logo"
-            ><img src="./assets/img/A.png" alt="A"
-          /></a> -->
+          <!-- Add logo here if needed -->
         </div>
-
-        <div class="nav-menu" id="nav-menu">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="#home" class="nav-link home active">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#about" class="nav-link about">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="#skills" class="nav-link skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a href="#projects" class="nav-link projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a href="#contact" class="nav-link contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="nav-toggle" id="nav-toggle">
+        <ul class="hidden md:flex space-x-8 font-semibold text-lg">
+          <li><a href="#home" class="hover:text-blue-600 active:text-blue-600">Home</a></li>
+          <li><a href="#about" class="hover:text-blue-600">About</a></li>
+          <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
+          <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
+          <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+        </ul>
+        <!-- Mobile menu toggle -->
+        <div id="nav-toggle" class="md:hidden cursor-pointer text-3xl">
           <i class="bx bx-menu"></i>
         </div>
       </nav>
     </header>
 
-    <main class="l-main">
-      <!--===== HOME =====-->
-      <section class="home bd-grid section" id="home">
-        <div class="home-data">
-          <h2 class="home-title">
-            Hi 👋,<br />I'am <span class="home-title-color">Vipin</span><br />
-            Backend Developer
-          </h2>
+    <!-- MAIN -->
+    <main class="container mx-auto px-4 py-10 space-y-20">
 
-          <a onclick="vipin()"
-          href="https://drive.google.com/file/d/1kBalyZQq0rHRKAhDrW77FH-cRDEG9biJ/view?usp=sharing" 
-            target="_blank"
-            class="button"
-            >Resume</a
+      <!-- HOME -->
+     <section id="home" class="bg-white py-20 px-6">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
 
-          >
-          <!-- <a
-          href="https://drive.google.com/u/0/uc?id=1nPz2y9tUfYpOHvpM5QmU7pNvwaurbetl&export=download" 
-          target="_blank"
-          class="button"
-          > Download</a
+    <!-- Left: Content -->
+    <div class="flex-1 text-center md:text-left">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+        Hey, I'm <span class="text-blue-600">Vipin</span> 👋
+      </h1>
+      <p class="text-lg text-gray-700 mb-6 max-w-xl mx-auto md:mx-0">
+        A passionate <strong>Full Stack Developer</strong> crafting modern, scalable web apps using
+        <span class="text-blue-500 font-semibold">Java (Spring Boot)</span> & 
+        <span class="text-blue-500 font-semibold">React.js</span>. 
+        I turn ideas into high-performance code and user-friendly interfaces.
+      </p>
 
-        > -->
-          
-        </div>
-
-        <div class="home-social">
-          <a
-          href="https://www.linkedin.com/in/vipin-barode-5a6023231/"
-            target="_blank"
-            class="home-social-icon"
-            ><i class="bx bxl-linkedin"></i
-          ></a>
-          <a
-            href="https://github.com/vipinbrd"
-            target="_blank"
-            class="home-social-icon"
-            ><i class="bx bxl-github"></i
-          ></a>
-        </div>
-
-        <div class="home-img">
-          <img src="assets/img/vipin new image (1).png" alt="myIMG" />
-        </div>
-      </section>
-
-      <!--===== ABOUT =====-->
-      <section class="about section" id="about">
-        <h2 class="section-title">About</h2>
-
-        <div class="about-container bd-grid">
-          <!-- <div class="about-img">
-            <img src="assets/img/Profile1.png" alt="" />
-          </div> -->
-
-          <div style="text-align: center">
-            <h2 class="about-subtitle">Hey! I'm Vipin</h2>
-            <p class="about-text">
-              Quick learner and an aspiring backend developer with core
-              knowledge of  backend technology. Looking forward to applying
-              and enhancing my skills and knowledge as a backend developer.
-            </p>
-            <br />
-            <p>
-              Drop a mail @ vipinbarode7@gmail.com
-              <i
-                style="color: #4070f4; font-size: 1.2rem; cursor: pointer"
-                class="bx bx-copy"
-                id="copy"
-              ></i>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!--===== SKILLS =====-->
-      <section class="skills section" id="skills">
-        <h2 class="section-title">Skills</h2>
-
-        <div class="skills-container bd-grid">
-          <div>
-            <!-- <h2 class="skills-subtitle">Front-end Skills</h2> -->
-            <div class="skills-data">
-              <div class="skills-names">
-                <!-- <i class="fab fa-java skills-icon"></i> -->
-                <img src="https://img.icons8.com/color/48/null/java-coffee-cup-logo--v1.png" style="margin-right:4%;"/>
-                <span class="skills-name"> Core Java</span>
-              </div>
-              <!-- <div class="skills-bar skills-html"></div> -->
-              <!-- <div>
-                <span class="skills-percentage">75%</span>
-              </div> -->
-            </div>
-            <div class="skills-data">
-              <div class="skills-names">
-                <!-- <i class="fab fa-spring skills-icon"></i> -->
-                <!-- <i class="fab fa-spring-boot"></i> -->
-                <img src="https://img.icons8.com/color/48/null/spring-logo.png" style="margin-right:4%;">
-                <span class="skills-name">SpringBoot</span>
-              </div>
-              <!-- <div class="skills-bar skills-css"></div> -->
-              <!-- <div>
-                <span class="skills-percentage">70%</span>
-              </div> -->
-            </div>
-            <div class="skills-data">
-              <div class="skills-names">
-                <!-- <i class="bx bxl-hibernate skills-icon"></i> -->
-                <img src="https://img.icons8.com/color/48/null/hibernate--v1.png" style="margin-right:4%;">
-
-                <span class="skills-name">Hibernate</span>
-              </div>
-              <!-- <div class="skills-bar skills-js"></div> -->
-              <!-- <div>
-                <span class="skills-percentage">85%</span>
-              </div> -->
-            </div>
-            <div class="skills-data">
-              <div class="skills-names">
-                <!-- <i class="fas fa-database skills-icon"></i> -->
-                <img src="https://img.icons8.com/color/48/null/mysql-logo.png" style="margin-right:5%;">
-                <span class="skills-name">MySQL</span>
-              </div>
-              <!-- <div class="skills-bar skills-react"></div> -->
-              <!-- <div>
-                <span class="skills-percentage">80%</span>
-              </div> -->
-            </div>
-            <div class="skills-data">
-              <div class="skills-names">
-                <!-- <i class="bx bxl-css3 skills-icon"></i> -->
-                <img src="https://img.icons8.com/color/48/null/amazon-web-services.png" style="margin-right:4%;">
-                <span class="skills-name">AWS</span>
-              </div>
-              <!-- <div class="skills-bar skills-redux"></div> -->
-              <!-- <div>
-                <span class="skills-percentage">90%</span>
-              </div> -->
-            </div>
-            <div class="skills-data">
-              <div class="skills-names">
-                <!-- <i class="bx bxl-css3 skills-icon"></i> -->
-                <img src="https://img.icons8.com/color/48/null/css3.png" style="margin-right:4%;">
-                <span class="skills-name">CSS</span>
-              </div>
-              <!-- <div class="skills-bar skills-redux"></div> -->
-              <!-- <div>
-                <span class="skills-percentage">90%</span>
-              </div> -->
-            </div>
-            <div class="skills-data">
-              <div class="skills-names">
-                
-                <!-- <i class="bx bxl-html5 skills-icon"></i> -->
-                <img src="https://img.icons8.com/color/48/null/html-5--v1.png" style="margin-right:4%;">
-                <span class="skills-name">HTML</span>
-              </div>
-              <!-- <div class="skills-bar skills-mui"></div> -->
-              <!-- <div>
-                <span class="skills-percentage">65%</span>
-              </div> -->
-            </div>
-            <div class="skills-data">
-              <div class="skills-names">
-                <!-- <img
-                  class="skills-icon"
-                  src="./assets/img/typescript.png"
-                  alt=""
-                /> -->
-               
-                <!-- <i class="bx bxl-javascript skills-icon"></i> -->
-                <img src="https://img.icons8.com/color/48/null/javascript--v1.png" style="margin-right:4%;">
-                <span class="skills-name">JavaScript</span>
-              </div>
-              
-              <!-- <div class="skills-bar skills-ts"></div> -->
-              <!-- <div>
-                <span class="skills-percentage">70%</span>
-              </div> -->
-            </div>
-          </div>
-          
-
-      <!--===== Projects =====-->
-      <section class="projects section" id="projects">
-        <h2 class="section-title">Projects</h2>
-<!-- ///////////// 1//////////// -->
-        <div class="project-container">
-          <div class="project-img">
-            <img src="assets/img/gradigi.png" alt="naturesbasket.co.in" />
-            <p class="project-title">Gradigi</p>
-            <p class="project-subtitle">
-              Gradigi is a web-based platform designed to assist in grading live presentations and interviews. <br />
-              <br />
-              A collaborative project built by a team of 5, executed in 1 Month.
-              <br />
-              <br />React | Java | SpringBoot | Mysql | 
-            </p>
-            <div class="project-btns">
-              <!-- <a
-                href="https://github.com/masai-builds/Team5_Backend"
-                target="_blank"
-                class="small-btn button"
-              >
-                Code<i class="bx bxl-github"></i>
-              </a> -->
-              <a
-                href="http://35.178.251.86:8080/"
-                target="_blank"
-                class="small-btn button"
-              >
-                Live<i class="bx bx-link-external"></i>
-              </a>
-            </div>
-          </div>
-
-<!-- //////////////2////////////////// -->
-          <div class="project-img">
-            <img src="assets/img/Masai build.png" alt="naturesbasket.co.in" />
-            <p class="project-title">Masai Build</p>
-            <p class="project-subtitle">
-              Masai learning platform is a digital tool that provides an online space for learners and instructors to interact, communicate, share resources, and engage in educational activitie <br />
-              <br />
-              A collaborative project built by a team of 6, executed in  1 Month.
-              <br />
-              <br />HTML | CSS | JavaScript
-            </p>
-            <div class="project-btns">
-              <!-- <a
-                href="https://github.com/masai-builds/Team5"
-                target="_blank"
-                class="small-btn button"
-              >
-                Code<i class="bx bxl-github"></i>
-              </a> -->
-              <a
-                href="http://13.233.22.43:3000"
-                target="_blank"
-                class="small-btn button"
-              >
-                Live<i class="bx bx-link-external"></i>
-              </a>
-            </div>
-          </div>
-
-
-
-          <!-- //////////////////3/////////////////////// -->
-          <div class="project-img">
-            <img src="assets/img/foodAppPic.png" alt="FoodApp" />
-            <p class="project-title">Food Delivery App API</p>
-            <p class="project-subtitle">
-              Provides a REST API for an Online Food Delivery application. 
-              The Ap performs all the fundamental CRUD operations.
-              <br />
-              <br />
-              An individual project, built in 5 days .
-               <br />
-              <br />Java | SpringBoot | Spring JPA | Hibernate | MySql 
-            </p>
-            <div class="project-btns">
-              <a
-                href="https://github.com/ekhan4077/awesome-volleyball-5374"
-                target="_blank"
-                class="small-btn button"
-              >
-                Code<i class="bx bxl-github"></i>
-              </a>
-              <a
-                href="https://drive.google.com/file/d/1H_wYa1YasifiRcj4fyM1-ziFRlWwDVwm/view?usp=sharing"
-                target="_blank"
-                class="small-btn button"
-              >
-                Live<i class="bx bx-link-external"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="project-img">
-            <img src="assets/img/naturebasket pic.png" alt="naturesbasket.co.in" />
-            <p class="project-title">Naturesbasket.co.in clone</p>
-            <p class="project-subtitle">
-              Natures basket is an Indian online website where you can grocerries and
-              daily needed foods. <br />
-              <br />
-              A collaborative project built by a team of 5, executed in 5 days.
-              <br />
-              <br />HTML | CSS | JavaScript
-            </p>
-            <div class="project-btns">
-              <a
-                href="https://github.com/aaryansinha16/Nature-Basket-WEB-18"
-                target="_blank"
-                class="small-btn button"
-              >
-                Code<i class="bx bxl-github"></i>
-              </a>
-              <a
-                href="https://teal-pixie-015fbb.netlify.app/"
-                target="_blank"
-                class="small-btn button"
-              >
-                Live<i class="bx bx-link-external"></i>
-              </a>
-            </div>
-          </div>
-<!-- /////////////////////////////////// -->
-          <div class="project-img">
-            <img src="assets/img/youtube.png" alt="https://youtube-clonebrd.netlify.app/" />
-            <p class="project-title">Youtube clone</p>
-            <p class="project-subtitle">
-              This is a clone of YouTube video streaming website, YouTube is an online video sharing and social media platform. It is a good income source for many video creators <br />
-              <br />
-              A collaborative project built by a team of 6, executed in 5 days.
-              <br />
-              <br />
-              HTML | CSS | Javascript | Git
-            </p>
-            <div class="project-btns">
-              <a
-                href="https://github.com/vipinbrd/Youtube_Clone"
-                target="_blank"
-                class="small-btn button"
-              >
-                Code<i class="bx bxl-github"></i>
-              </a>
-              <a
-                href="https://youtube-clonebrd.netlify.app/"
-                target="_blank"
-                class="small-btn button"
-              >
-                Live<i class="bx bx-link-external"></i>
-              </a>
-            </div>
-          </div>
-       
-
-
-
-
-<!-- //////////////////////////////////////////github -->
-        </div>
-      </section>
-
-      
-    </main>
-<!-- ////////////////////////////////////////github-->
-
-<section class="skills section" id="skills">
-  <h2 class="section-title">GitHub Calendar</h2>
-
-  <div class="skills-container bd-grid">
-    <div>
-<!-- Prepare a container for your calendar. -->
-<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
-</script>
-<link rel="stylesheet"
-    href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
-<div class="calendar">
-    Loading the data just for you.
-</div>
-
-<script>
-    GitHubCalendar(".calendar", "vipinbrd", { responsive: true }, {
-        proxy(vipinbrd) {
-            return fetch(`https://your-proxy.com/github?user=${vipinbrd}`)
-        }
-    }).then(r => r.text())
-</script>
-<!-- https://github-readme-stats.vercel.app/api?username=vipinbrd&theme=radical -->
-<!-- https://github-readme-streak-stats.herokuapp.com/?user=vipinbrd&theme=radical -->
-
-    </div>
-     
-  </div>
-  </section>
-
-<!-- \\\\\\\\\\\\\\\\\\stats///// -->
-<div class="image-container">
-  <img src="https://github-readme-stats.vercel.app/api?username=vipinbrd&theme=radical" alt="Image 1 description">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=vipinbrd&theme=radical" alt="Image 2 description">
-</div>
-
-
-
-
-
-
-
-<!-- /////////////////////////////////////github -->
-    <!--===== FOOTER + CONTACT=====-->
-    <footer class="footer section" id="contact">
-      <h2 class="section-title">Get in touch</h2>
-      <p class="footer-title">Vipin barode</p>
-      <div class="footer-social">
-        <a
-          href="https://www.linkedin.com/in/vipin-barode-5a6023231/"
-          target="_blank"
-          class="footer-icon"
-          ><i class="bx bxl-linkedin">
-            <br />
-            LinkedIn</i
-          ></a
-        >
-        <!-- <a
-          href="https://twitter.com/Akshaykanherka3"
-          target="_blank"
-          class="footer-icon"
-          ><i class="bx bxl-twitter">
-            <br />
-            Twitter</i
-          ></a
-        > -->
-        <!-- <a
-          href="https://www.instagram.com/struggler_ak/"
-          target="_blank"
-          class="footer-icon"
-          ><i class="bx bxl-instagram">
-            <br />
-            Instagram</i
-          ></a -->
-        <!-- > -->
-        <a
-          href="mailto:vipinbarode7@gmail.com"
-          target="_blank"
-          class="footer-icon"
-          ><i class="bx bx-mail-send">
-            <br />
-            E-mail</i
-          ></a
-        >
-        <a href="tel:+9301760927" target="_blank" class="footer-icon"
-          ><i class="bx bx-phone">
-            <br />
-            Phone</i
-          ></a
-        >
+      <!-- Skills as tags -->
+      <div class="flex flex-wrap gap-3 mb-6 justify-center md:justify-start">
+        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Spring Boot</span>
+        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">React</span>
+        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">REST APIs</span>
+        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Tailwind CSS</span>
       </div>
-      <p>&#169; 2022 copyright all right reserved</p>
+
+      <!-- Buttons -->
+      <div class="flex items-center gap-4 justify-center md:justify-start mb-6">
+        <a
+          href="https://drive.google.com/file/d/1kBalyZQq0rHRKAhDrW77FH-cRDEG9biJ/view?usp=sharing"
+          target="_blank"
+          class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+        >
+          View Resume
+        </a>
+        <div class="flex gap-4 text-2xl text-gray-600">
+          <a href="https://www.linkedin.com/in/vipin-barode-5a6023231/" target="_blank" class="hover:text-blue-600">
+            <i class="bx bxl-linkedin"></i>
+          </a>
+          <a href="https://github.com/vipinbrd" target="_blank" class="hover:text-black">
+            <i class="bx bxl-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="flex-1 flex justify-center">
+      <img
+        src="assets/img/vipin new image.png"
+        alt="Vipin"
+        class="w-72 md:w-96 rounded-xl shadow-lg border border-gray-200"
+      />
+    </div>
+
+  </div>
+</section>
+
+      <!-- ABOUT -->
+      <section id="about" class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">About</h2>
+        <h3 class="text-xl font-semibold mb-4">Hey! I'm Vipin</h3>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          A Full Stack Developer skilled in Java (Spring Boot), React, and AWS. I build scalable web applications with clean code and a focus on performance, user experience, and cloud deployment. Always eager to learn and solve real-world problems through tech.
+        </p>
+        <p class="text-gray-900 font-medium">
+          Drop a mail @ <span class="underline cursor-pointer" id="copy-email">vipinbarode7@gmail.com</span>
+          <i
+            style="color: #4070f4; font-size: 1.5rem; cursor: pointer"
+            class="bx bx-copy inline ml-2"
+            id="copy"
+            title="Copy email"
+          ></i>
+        </p>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center">Skills</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <!-- Each skill item -->
+          <div class="flex items-center space-x-4 bg-white p-4 rounded-md shadow-sm">
+            <img src="https://img.icons8.com/color/48/null/java-coffee-cup-logo--v1.png" alt="Java" />
+            <span class="font-semibold">Core Java</span>
+          </div>
+          <div class="flex items-center space-x-4 bg-white p-4 rounded-md shadow-sm">
+            <img src="https://img.icons8.com/color/48/null/spring-logo.png" alt="Spring Boot" />
+            <span class="font-semibold">Spring Boot</span>
+          </div>
+          <div class="flex items-center space-x-4 bg-white p-4 rounded-md shadow-sm">
+            <img src="https://img.icons8.com/color/48/null/hibernate--v1.png" alt="Hibernate" />
+            <span class="font-semibold">Hibernate</span>
+          </div>
+          <div class="flex items-center space-x-4 bg-white p-4 rounded-md shadow-sm">
+            <img src="https://img.icons8.com/color/48/null/mysql-logo.png" alt="MySQL" />
+            <span class="font-semibold">MySQL</span>
+          </div>
+          <div class="flex items-center space-x-4 bg-white p-4 rounded-md shadow-sm">
+            <img src="https://img.icons8.com/color/48/null/amazon-web-services.png" alt="AWS" />
+            <span class="font-semibold">AWS</span>
+          </div>
+          <div class="flex items-center space-x-4 bg-white p-4 rounded-md shadow-sm">
+            <img src="https://img.icons8.com/color/48/null/react-native.png" alt="React" />
+            <span class="font-semibold">React</span>
+          </div>
+          <div class="flex items-center space-x-4 bg-white p-4 rounded-md shadow-sm">
+            <img src="https://img.icons8.com/color/48/000000/redux.png" alt="Redux" />
+            <span class="font-semibold">Redux</span>
+          </div>
+        <div class="flex items-center space-x-4 bg-white p-4 rounded-md shadow-sm">
+  <img src="https://cdn-icons-png.flaticon.com/512/2714/2714975.png" alt="Microservices" class="w-10 h-10 object-contain" />
+  <span class="font-semibold">Microservices</span>
+</div>
+<div class="flex items-center space-x-4 bg-white p-4 rounded-md shadow-sm">
+  <img src="https://img.icons8.com/ios-filled/50/000000/data-in-both-directions.png" alt="Stream" class="w-10 h-10 object-contain" />
+  <span class="font-semibold">Kafka</span>
+</div>
+<div class="flex items-center space-x-4 bg-white p-4 rounded-md shadow-sm">
+  <img src="https://img.icons8.com/color/48/000000/docker.png" alt="Docker" />
+  <span class="font-semibold">Docker</span>
+</div>
+
+
+          <div class="flex items-center space-x-4 bg-white p-4 rounded-md shadow-sm">
+            <img src="https://img.icons8.com/color/48/null/javascript--v1.png" alt="JavaScript" />
+            <span class="font-semibold">JavaScript</span>
+          </div>
+          <div class="flex items-center space-x-4 bg-white p-4 rounded-md shadow-sm">
+  <img src="https://img.icons8.com/color/48/000000/tailwindcss.png" alt="Tailwind CSS" />
+  <span class="font-semibold">Tailwind CSS</span>
+</div>
+
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-10 text-center">Projects</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+           <!-- Project -0 -->
+                 <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+            <img src="assets/img/news.png" alt="Quiz App" class="w-full h-48 object-contain bg-white p-2" />
+
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-2">Tech News</h3>
+              <p class="text-gray-700 flex-grow mb-4">
+  
+          TechNews is a sleek and responsive platform delivering the latest technology news, insights, and trends. Stay informed with curated articles across various tech categories, powered by a modern React frontend and a robust Spring Boot backend.<br /><br />
+                React | Spring Boot | Redis | MySQL |AWS
+              </p>
+              <div class="flex space-x-3">
+                <a
+                  href="https://technews.myhealthgainer.in/"
+                  target="_blank"
+                  class="flex items-center gap-1 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                >
+                  <i class="bx bx-live"></i> Live
+                </a>
+                <a
+                  href="https://github.com/vipinbrd/TechNewsClient"
+                  target="_blank"
+                  class="flex items-center gap-1 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-900 transition"
+                >
+                  <i class="bx bxl-github"></i> GitHub
+                </a>
+                <a
+                  href="https://documenter.getpostman.com/view/23490471/2sB2qcE1to"
+                  target="_blank"
+                  class="flex items-center gap-1 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
+                >
+                  <i class="bx bx-file"></i> API Docs
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project 1 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+            <img src="assets/img/gradigi.png" alt="Gradigi" class="w-full h-48 object-cover" />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-2">Gradigi</h3>
+              <p class="text-gray-700 flex-grow mb-4">
+                Gradigi is a web-based platform designed to assist in grading live presentations and interviews.<br /><br />
+                A collaborative project built by a team of 5, executed in 1 Month.<br /><br />
+                React | Java | SpringBoot | MySQL
+              </p>
+              <div class="flex space-x-3">
+                <!-- <a
+                  href="http://35.178.251.86:8080/"
+                  target="_blank"
+                  class="flex items-center gap-1 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                >
+                  <i class="bx bx-live"></i> Live
+                </a> -->
+                <!-- <a
+                  href="#"
+                  target="_blank"
+                  class="flex items-center gap-1 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-900 transition"
+                >
+                  <i class="bx bxl-github"></i> GitHub
+                </a> -->
+                <a
+                  href="https://documenter.getpostman.com/view/23490471/2s93RXsAN2"
+                  target="_blank"
+                  class="flex items-center gap-1 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
+                >
+                  <i class="bx bx-file"></i> API Docs
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+            <img src="assets/img/mail.png" alt="Quiz App" class="w-full h-48 object-contain bg-white p-2" />
+
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-2">Mail App</h3>
+              <p class="text-gray-700 flex-grow mb-4">
+  
+           MailBox Client is a sleek, full-featured email application built with React, Redux, and Spring Boot. It offers Gmail-like functionality—allowing users to compose, send, receive, and organize emails ..<br /><br />
+                React | Spring Boot | Redis | MySQL |AWS
+              </p>
+              <div class="flex space-x-3">
+                <a
+                  href="https://mymail.myhealthgainer.in/"
+                  target="_blank"
+                  class="flex items-center gap-1 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                >
+                  <i class="bx bx-live"></i> Live
+                </a>
+                <a
+                  href="https://github.com/vipinbrd/mail-box-client"
+                  target="_blank"
+                  class="flex items-center gap-1 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-900 transition"
+                >
+                  <i class="bx bxl-github"></i> GitHub
+                </a>
+                <!-- <a
+                  href=""
+                  target="_blank"
+                  class="flex items-center gap-1 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
+                >
+                  <i class="bx bx-file"></i> API Docs
+                </a> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+            <img src="assets/img/movie.png" alt="Airbnb Clone" class="w-full h-48 object-cover" />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3 class="text-xl font-semibold mb-2">Movie Mania</h3>
+              <p class="text-gray-700 flex-grow mb-4">
+              A full-stack Movie Ticket Booking web application built with React (Vite, Redux, Spring Boot with MySQL for the backend. This project demonstrates a modern monolithic architecture with RESTful APIs, state management, and responsive design.<br /><br />
+                 React | Spring Boot | Redis | MySQL | AWS | Tailwind CSS
+              </p>
+              <div class="flex space-x-3">
+                <a
+                  href="https://movie.myhealthgainer.in/"
+                  target="_blank"
+                  class="flex items-center gap-1 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                >
+                  <i class="bx bx-live"></i> Live
+                </a>
+                <a
+                  href="https://github.com/vipinbrd/movie-booking-client"
+                  target="_blank"
+                  class="flex items-center gap-1 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-900 transition"
+                >
+                  <i class="bx bxl-github"></i> GitHub
+                </a>
+                <a
+                  href="https://documenter.getpostman.com/view/23490471/2sB2qdfKQ6"
+                  target="_blank"
+                  class="flex items-center gap-1 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
+                >
+                  <i class="bx bx-file"></i> API Docs
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <!-- Github section -->
+      <section id="github" class="bg-gray-50 py-16 px-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+      GitHub Stats 🚀
+    </h2>
+    <div class="grid md:grid-cols-2 gap-8 justify-center items-center">
+      <img
+        src="https://github-readme-stats.vercel.app/api?username=vipinbrd&theme=radical"
+        alt="GitHub Stats"
+        class="w-full max-w-md mx-auto shadow-lg rounded-lg"
+      />
+      <img
+        src="https://github-readme-streak-stats.herokuapp.com/?user=vipinbrd&theme=radical"
+        alt="GitHub Streak"
+        class="w-full max-w-md mx-auto shadow-lg rounded-lg"
+      />
+    </div>
+  </div>
+</section>
+
+
+      <!-- CONTACT -->
+      <section
+        id="contact"
+        class="max-w-2xl mx-auto bg-white p-8 rounded shadow text-center space-y-6"
+      >
+        <h2 class="text-3xl font-bold">Contact Me</h2>
+        <p class="text-gray-700">
+          Interested in collaborating or just want to say hi? Feel free to reach
+          out via mail or LinkedIn.
+        </p>
+        <p class="font-semibold text-lg">vipinbarode7@gmail.com</p>
+        <div class="flex justify-center space-x-6 text-4xl text-gray-700">
+          <a href="mailto:vipinbarode7@gmail.com" class="hover:text-blue-600">
+            <i class="bx bx-envelope"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/vipin-barode-5a6023231/" target="_blank" class="hover:text-blue-700">
+            <i class="bx bxl-linkedin"></i>
+          </a>
+          <a href="https://github.com/vipinbrd" target="_blank" class="hover:text-gray-900">
+            <i class="bx bxl-github"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-100 py-4 text-center text-gray-600">
+      &copy; 2024 Vipin Barode. All rights reserved.
     </footer>
 
-    <!--===== MAIN JS =====-->
-    <script src="assets/js/main.js"></script>
+    <script>
+      // Copy email to clipboard
+      document.getElementById("copy").addEventListener("click", () => {
+        const emailText = document.getElementById("copy-email").textContent;
+        navigator.clipboard.writeText(emailText).then(() => {
+          alert("Email copied to clipboard!");
+        });
+      });
+
+      // Mobile menu toggle
+      const navToggle = document.getElementById("nav-toggle");
+      const navMenu = document.querySelector("header nav ul");
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
